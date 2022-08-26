@@ -12,13 +12,29 @@
 <br />
 
 <h1>Products</h1>
+
+<table class="table">
+<tbody>
+<thead>
+<tr>
+  <th scope="col"></th>
+  <th scope="col">Product Name</th>
+  <th scope="col">Quantity</th>
+  <th scope="col">Price</th>
+</tr>
+</thead>
+
 <% @client.products.each do |product| %>
-<li>Product Name: <%= product.product_name %></li>
-<li>Quantity: <%= product.quantity %></li>
-<li>Price: <%= product.price %></li>
-<%= link_to "Show", client_product_path(@client, product) %>
-<br />
-<br />
-<% end %>
+    <tr>
+      <th scope="row">1</th>
+      <td><%= product.product_name %></td>
+      <td><%= product.quantity %></td>
+      <td><%= product.price %></td>
+      <td><%= link_to "Show", client_product_path(@client, product) %></td>
+    </tr>
+    <% end %>
+    </tbody>
+  </table>
+
 
 <%= link_to "New Product", new_client_product_path(@client) %>
