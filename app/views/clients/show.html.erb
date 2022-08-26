@@ -3,8 +3,22 @@
 <%= render @client %>
 
 <div>
-  <%= link_to "Edit this client", edit_client_path(@client) %> |
+  <%= link_to "Edit this client", edit_client_path(@client) %>
   <%= link_to "Back to clients", clients_path %>
 
   <%= button_to "Destroy this client", @client, method: :delete %>
 </div>
+
+<br />
+
+<h1>Products</h1>
+<% @client.products.each do |product| %>
+<li>Product Name: <%= product.product_name %></li>
+<li>Quantity: <%= product.quantity %></li>
+<li>Price: <%= product.price %></li>
+<%= link_to "Show", client_product_path(@client, product) %>
+<br />
+<br />
+<% end %>
+
+<%= link_to "New Product", new_client_product_path(@client) %>

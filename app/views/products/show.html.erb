@@ -3,8 +3,6 @@
 <%= render @product %>
 
 <div>
-  <%= link_to "Edit this product", edit_product_path(@product) %> |
-  <%= link_to "Back to products", products_path %>
-
-  <%= button_to "Destroy this product", @product, method: :delete %>
+  <%= link_to "Edit Product", edit_client_product_path(@client, @product) %>
+  <%= button_to "Delete Product", [@client, @product], method: :delete %>
 </div>
