@@ -1,8 +1,3 @@
 <p style="color: green"><%= notice %></p>
 
 <%= render @product %>
-
-<div>
-  <%= link_to "Edit Product", edit_client_product_path(@client, @product) %>
-  <%= button_to "Delete Product", [@client, @product], method: :delete %>
-</div>

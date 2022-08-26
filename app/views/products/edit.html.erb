@@ -1,9 +1,10 @@
-<h1>Editing product</h1>
-
-<%= render "form", product: @product %>
-
-<br>
-
-<div>
-  <%= link_to "Back to products", client_products_path(@client) %>
+<div class="card">
+  <h5 class="card-header">Edit Product</h5>
+  <div class="card-body">
+  <%= render "form", product: @product %>
+  <br>  
+  <div>
+    <%= link_to "Back", client_product_path(@client, @product), class: "btn btn-outline-primary" %>
+  </div>
+  </div>
 </div>

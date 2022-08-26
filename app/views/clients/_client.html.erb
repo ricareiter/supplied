@@ -1,7 +1,16 @@
 <div id="<%= dom_id client %>">
-  <p>
-    <strong>Name:</strong>
-    <%= client.name %>
-  </p>
-
+<div class="card">
+  <div class="card-header">
+    Client Details
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"><%= client.name %></h5>
+    <p class="card-text">Additional information.</p>
+    <div class="mb-3">
+    <%= link_to "Back", clients_path, class: "btn btn-primary" %>
+    <%= link_to "Edit", edit_client_path(@client), class: "btn btn-primary inline-block" %>
+    </div>
+    <%= button_to "Delete", @client, :method => :delete, class: "btn btn-outline-danger" %>    
+  </div>
+</div>
 </div>
