@@ -2,13 +2,21 @@
 
 <h1>Clients</h1>
 
-<div id="clients">
-  <% @clients.each do |client| %>
-    <%= render client %>
-    <p>
-      <%= link_to "Show this client", client %>
-    </p>
-  <% end %>
-</div>
+<table class="table">
+<tbody>
+<thead>
+<tr>
+  <th scope="col">Client Name</th>
+</tr>
+</thead>
+
+<% @clients.each do |client| %>
+    <tr>
+      <td><%= client.name %></td>
+      <td><%= link_to "Show", client %></td>
+    </tr>
+    <% end %>
+    </tbody>
+  </table>
 
 <%= link_to "New client", new_client_path %>
