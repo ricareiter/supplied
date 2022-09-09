@@ -1,16 +1,19 @@
-<div id="<%= dom_id client %>">
-<div class="card">
-  <div class="card-header">
-    Client Details
-  </div>
-  <div class="card-body">
-    <h5 class="card-title"><%= client.name %></h5>
-    <p class="card-text">Additional information.</p>
-    <div class="mb-3">
-    <%= link_to "Back", clients_path, class: "btn btn-primary" %>
-    <%= link_to "Edit", edit_client_path(@client), class: "btn btn-primary inline-block" %>
+<div class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-header card-header-primary">
+            <h4 class="card-title"><%= client.name %></h4>
+            <p class="card-category">Client information.</p>
+          </div>
+          <div class="card-body">
+            <%= link_to "Edit", edit_client_path(@client), class: "btn btn-primary inline-block" %>
+            <%= link_to "Back", clients_path, class: "btn btn-primary" %>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
     </div>
-    <%= button_to "Delete", @client, :method => :delete, class: "btn btn-outline-danger" %>    
   </div>
-</div>
 </div>

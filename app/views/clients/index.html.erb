@@ -1,25 +1,54 @@
 <p style="color: green"><%= notice %></p>
 
-<div class="container-fluid">
-<h1 class="text-center">Clients</h1>
-
-<table class="table table-hover table-bordered">
-<tbody>
-<thead>
-<tr class="table-light">
-  <th scope="col">Client Name</th>
-  <th></th>
-</tr>
-</thead>
-
-<% @clients.each do |client| %>
-    <tr>
-      <td><%= client.name %></td>
-      <td><%= link_to "Show", client, class: "btn btn-outline-primary" %></td>
-    </tr>
-    <% end %>
-    </tbody>
-  </table>
-
-<%= link_to "New client", new_client_path, class: "btn btn-primary" %>
+<div class="container-fluid py-4">
+      <div class="row">
+        <div class="col-9">
+          <div class="card my-4">
+            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+              <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+                <h6 class="text-white text-capitalize ps-3">Clients</h6>
+              </div>
+            </div>
+            <div class="card-body px-0 pb-2">
+              <div class="table-responsive p-0">
+                <table class="table align-items-center mb-0">
+                  <thead>
+                    <tr>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Client</th>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Function</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Employed</th>
+                      <th class="text-secondary opacity-7"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  <% @clients.each do |client| %>
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm"><%= client.name %></h6>
+                            <p class="text-xs text-secondary mb-0">john@creative-tim.com</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="text-xs font-weight-bold mb-0">Manager</p>
+                        <p class="text-xs text-secondary mb-0">Organization</p>
+                      </td>
+                      <td class="align-middle text-center">
+                        <span class="text-secondary text-xs font-weight-bold">23/04/18</span>
+                      </td>
+                      <td class="align-middle">
+                        <%= link_to "View", client, class: "text-secondary font-weight-bold text-xs"  %>
+                      </td>
+                    </tr>
+                    <% end %>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <%= link_to "New client", new_client_path, class: "btn btn-primary" %>
+        </div>
+      </div>
 </div>

@@ -1,10 +1,39 @@
-<div class="card">
-  <h5 class="card-header">Edit Client</h5>
-  <div class="card-body">
-  <%= render "form", client: @client %>
-  <br>  
-  <div>
-    <%= link_to "Back", clients_path, class: "btn btn-outline-primary" %>
-  </div>
+<div class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="card">
+          <div class="card-header card-header-primary">
+            <h4 class="card-title">Edit Client</h4>
+            <p class="card-category">Edit Client Information</p>
+          </div>
+          <div class="card-body">
+          <%= form_with(model: @client) do |form| %>
+            <% if @client.errors.any? %>
+              <div style="color: red">
+                <h2><%= pluralize(@client.errors.count, "error") %> prohibited this client from being saved:</h2>
+                <ul>
+                  <% @client.errors.each do |error| %>
+                    <li><%= error.full_message %></li>
+                  <% end %>
+                </ul>
+              </div>
+            <% end %>
+            <div class="row">
+              <div class="col-md-3">
+                <div class="input-group input-group-outline mb-3">
+                  <%= form.text_field :name, placeholder: "Client Name", class: "form-control" %>
+                </div>
+              </div>
+            </div>
+            <%= form.submit class: "btn btn-primary pull-right" %>
+            <%= link_to "Back", @client, class: "btn btn-outline-primary" %>
+            <%= button_to "Delete", @client, :method => :delete, class: "btn btn-outline-danger" %>
+            <div class="clearfix"></div>
+          <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
