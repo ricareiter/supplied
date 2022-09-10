@@ -43,7 +43,7 @@
                         <p class="text-xs text-secondary mb-0"><%= product.price %></p>
                       </td>
                       <td class="align-middle">
-                        <%= link_to "Edit", client_product_path(@client, product), class: "text-secondary font-weight-bold text-xs"  %>
+                        <%= link_to "Edit", edit_client_product_path(@client, product), class: "text-secondary font-weight-bold text-xs"  %>
                       </td>
                     </tr>
                     <% end %>

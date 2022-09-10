@@ -1,10 +1,60 @@
-<div class="card">
-  <h5 class="card-header">Edit Product</h5>
-  <div class="card-body">
-  <%= render "form", product: @product %>
-  <br>  
-  <div>
-    <%= link_to "Back", client_product_path(@client, @product), class: "btn btn-outline-primary" %>
-  </div>
+<div class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="card">
+          <div class="card-header card-header-primary">
+            <h4 class="card-title">Edit Product</h4>
+            <p class="card-category">Edit Product Information</p>
+          </div>
+          <div class="card-body">
+          <%= form_with(model: [@client, @product], local: true) do |form| %>
+            <% if @product.errors.any? %>
+              <div style="color: red">
+                <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
+                <ul>
+                  <% @product.errors.each do |error| %>
+                    <li><%= error.full_message %></li>
+                  <% end %>
+                </ul>
+              </div>
+            <% end %>
+            <div class="row">
+              <div class="col-md-3">
+                <div class="input-group input-group-outline mb-3">
+                  <%= form.text_field :product_name, placeholder: "Product Name", class: "form-control" %>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-3">
+                <div class="input-group input-group-outline mb-3">
+                  <%= form.text_field :brand, placeholder: "Brand", class: "form-control" %>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-3">
+                <div class="input-group input-group-outline mb-3">
+                  <%= form.text_field :quantity, placeholder: "Quantity", class: "form-control" %>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-3">
+                <div class="input-group input-group-outline mb-3">
+                  <%= form.text_field :price, placeholder: "Price", class: "form-control" %>
+                </div>
+              </div>
+            </div>
+            <%= form.submit class: "btn btn-primary pull-right" %>
+            <%= link_to "Back", @client, class: "btn btn-outline-primary" %>
+            <div class="clearfix"></div>
+          <% end %>
+          <%= button_to "Delete", [@client, @product], method: :delete, class: "btn btn-outline-danger" %>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

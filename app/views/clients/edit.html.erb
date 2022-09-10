@@ -28,9 +28,9 @@
             </div>
             <%= form.submit class: "btn btn-primary pull-right" %>
             <%= link_to "Back", @client, class: "btn btn-outline-primary" %>
-            <%= button_to "Delete", @client, :method => :delete, class: "btn btn-outline-danger" %>
             <div class="clearfix"></div>
           <% end %>
+          <%= button_to "Delete", @client, method: :delete, class: "btn btn-outline-danger" %>
           </div>
         </div>
       </div>
