@@ -26,6 +26,13 @@
                 </div>
               </div>
             </div>
+            <div class="row">
+              <div class="col-md-3">
+                <div class="input-group input-group-outline mb-3">
+                  <%= form.text_field :email, placeholder: "Client Email", class: "form-control" %>
+                </div>
+              </div>
+            </div>
             <%= form.submit class: "btn btn-primary pull-right" %>
             <%= link_to "Back", clients_path, class: "btn btn-outline-primary" %>
             <div class="clearfix"></div>

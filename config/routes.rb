@@ -3,7 +3,7 @@ Rails.application.routes.draw do
     resources :products
   end
 
-  root to: "home#index"
+  root to: "clients#index"
 
   get "password", to: "passwords#edit", as: :edit_password
   patch "password", to: "passwords#update"
