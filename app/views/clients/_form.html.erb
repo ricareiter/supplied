@@ -10,13 +10,10 @@
           <div class="card-body">
           <%= form_with(model: client) do |form| %>
             <% if client.errors.any? %>
-              <div style="color: red">
-                <h2><%= pluralize(client.errors.count, "error") %> prohibited this client from being saved:</h2>
-                <ul>
+              <div class="col-lg-3 col-sm-6 col-12 mt-lg-0 mt-2 mb-3">
                   <% client.errors.each do |error| %>
-                    <li><%= error.full_message %></li>
+                    <span class="btn bg-gradient-danger w-100 mb-0 toast-btn mb-2" style="cursor: auto"><%= error.full_message %></span>
                   <% end %>
-                </ul>
               </div>
             <% end %>
             <div class="row">
