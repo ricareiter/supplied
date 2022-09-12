@@ -10,9 +10,9 @@
                     <div class="card-body">
                         <%= form_with model: @user, url: sign_up_path do |form| %>
                             <% if @user.errors.any? %>
-                                <div class="alert alert-danger"
+                                <div class="mb-3">
                                     <% @user.errors.full_messages.each do |message| %>
-                                        <div><%= message %></div>
+                                        <span class="btn bg-gradient-danger w-100 mb-0 toast-btn mb-2" style="cursor: auto"><%= message %></span>
                                     <% end %>
                                 </div>
                             <% end %>

@@ -10,9 +10,11 @@
                     <div class="card-body">
                         <%= form_with model: Current.user, url: edit_password_path do |form| %>
                             <% if form.object.errors.any? %>
-                                <div class="alert alert-danger"
+                                <div class="mb-3">
                                     <% form.object.errors.full_messages.each do |message| %>
-                                        <div><%= message %></div>
+                                        <div class="alert alert-danger alert-dismissible text-white" role="alert">
+                                            <span class="text-sm"><%= message %></span>
+                                        </div>
                                     <% end %>
                                 </div>
                             <% end %>

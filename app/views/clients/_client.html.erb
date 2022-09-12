@@ -5,7 +5,8 @@
         <div class="card">
           <div class="card-header card-header-primary">
             <h4 class="card-title"><%= client.name %></h4>
-            <p class="card-category">Client information.</p>
+              <p class="card-category">Products in Stock: <%= client.products.sum(:quantity) %></p>
+              <p class="card-category">Amount Spent: $<%= client.products.sum(:price) %></p>
           </div>
           <div class="card-body">
             <%= link_to "Edit", edit_client_path(@client), class: "btn btn-primary inline-block" %>
