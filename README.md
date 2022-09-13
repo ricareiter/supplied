@@ -3,12 +3,12 @@
 Made with Ruby on Rails and Bootstrap. Supplied is the perfect application to store information about your clients/suppliers and their products.
 
 <p>
-    <img src="src/app/assets/images/supplied-img.png" >
+    <img src="app/assets/images/supplied-img.png" >
 </p>
 
 ## Live Demo
 
-- [Live Demo](https://fly.io/apps/cold-snow-4838)
+- [Live Demo](https://cold-snow-4838.fly.dev/)
 
 ## Built With
 
