@@ -1,24 +1,33 @@
-# README
+# Supplied
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Made with Ruby on Rails and Bootstrap. Supplied is the perfect application to store information about your clients/suppliers and their products.
 
-Things you may want to cover:
+<p>
+    <img src="src/Components/icon-img/movioimg.png" >
+</p>
 
-* Ruby version
+## Live Demo
 
-* System dependencies
+- [Live Demo](https://fly.io/apps/cold-snow-4838)
 
-* Configuration
+## Built With
 
-* Database creation
+- Ruby on Rails
+- Bootstrap
 
-* Database initialization
+## Author
 
-* How to run the test suite
+**Ricardo Reiter**
 
-* Services (job queues, cache servers, search engines, etc.)
+- GitHub: [@ricareiter](https://github.com/ricareiter)
+- Linkedin [Ricardo Reiter](https://www.linkedin.com/in/ricardoreiter/)
 
-* Deployment instructions
+## 🤝 Contributing
 
-* ...
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/ricareiter/supplied/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
